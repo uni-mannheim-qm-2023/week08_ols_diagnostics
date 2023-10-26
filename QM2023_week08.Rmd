@@ -112,7 +112,7 @@ quants_mean_fun <-  function(x) {
 }
 ```
 
-And here are all the simulation steps for predicted values:
+And here are all the simulation steps for expected values:
 
 ```{r simulate-EV}
 # Step 1 - Get the regression coefficients
@@ -484,6 +484,8 @@ lines(unemp, Y_quants_range_west[3, ],
       col = viridis(3)[3])
 ```
 
+We'll work with the simulation approach a lot and you will get more and more familiar with it as we apply it in various contexts.
+
 
 # Omitted Variable Bias (once more)
 
@@ -557,7 +559,9 @@ cor(X[, 1], X[, 2]) # check correlation (we specified it in cor_mat)
 ### 2. Choose true coefficients $b$. {-}
 
 ```{r ovb-2}
-b <- c(10, 3, 5) 
+b <- c(10, # intercept
+       3,  # beta_1
+       5)  # beta_2
 ```
 
 
